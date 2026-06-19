@@ -107,7 +107,7 @@ enum 50155 "Passport Page Count Type"
         caption = '52';
     }
 }
-enum 50156 "Select Location to Submit Application Type"
+enum 50156 "Submission Location Type"
 {
 
     caption = 'Select Location to Submit Application Type';
@@ -346,4 +346,24 @@ enum 50161 "Home County Type"
     value(29; "Kajiado") { Caption = 'Kajiado'; }
     value(30; "Kericho") { Caption = 'Kericho'; }
 
+}
+enum 50162 "Parent Status"
+{
+    Extensible = true;
+    Caption = 'Parent Status';
+
+    value(0; " ") { Caption = ' '; }
+    value(1; "Available") { Caption = 'Available'; }
+    value(2; "Deceased") { Caption = 'Deceased'; }
+    value(3; "Unknown") { Caption = 'Unknown / Missing'; }
+}
+
+enum 50163 "Children Status"
+{
+    Extensible = true;
+    Caption = 'Children Status';
+
+    value(0; " ") { Caption = ' '; }
+    value(1; "No") { Caption = 'No'; }
+    value(2; "Yes") { Caption = 'Yes'; }
 }

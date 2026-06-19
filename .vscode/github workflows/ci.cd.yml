@@ -1,0 +1,12 @@
+name: BC AL CI/CD
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
