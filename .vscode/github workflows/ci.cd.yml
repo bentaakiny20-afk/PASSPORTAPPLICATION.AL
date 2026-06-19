@@ -1,16 +1,19 @@
-name: BC AL CI/CD AL extension
+name: BC AL Extension CI/CD
+
 on:
   push:
     branches:
-      - main
+        - main
   pull_request:
     branches:
-      - main
+        - main
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: self-hosted
+
     steps:
-    - name: Checkout repository code
+      - name: Checkout repository code
         uses: actions/checkout@v4
 
       - name: Download AL Symbols
@@ -23,8 +26,8 @@ jobs:
         run: |
           # Find alc.exe from VS Code AL extensiona
           $alcPath = Get-ChildItem "$env:USERPROFILE\.vscode\extensions\ms-dynamics-smb.al-*\bin\win32\alc.exe" |
-                     Sort-Object FullName -Descending |
-                     Select-Object -First 1
+                    Sort-Object FullName -Descending |
+                    Select-Object -First 1
 
           if (-not $alcPath) {
             Write-Error "alc.exe not found."
@@ -71,3 +74,5 @@ jobs:
           } else {
             Write-Host "No test app found, skipping tests"
           }
+
+      #deleted publish step
