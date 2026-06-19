@@ -1,4 +1,4 @@
-name: BC AL CI/CD
+name: BC AL CI/CD AL extension
 on:
   push:
     branches:
