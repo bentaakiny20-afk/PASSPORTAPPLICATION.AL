@@ -39,7 +39,7 @@ jobs:
           $app          = Get-Content "$env:GITHUB_WORKSPACE\app.json" | ConvertFrom-Json
           $outputDir    = "$env:GITHUB_WORKSPACE\output"
           $outputApp    = $outputDir + "\" + $app.publisher + "_" + $app.name + "_" + $app.version + ".app"
-          $packagesPath = "C:\Users\user\OneDrive\Apps\ALProject1\.alpackages"
+          $packagesPath = "C:\Users\Admin\Documents\AL VScode projects\PassportApplication\.alpackages"
 
           New-Item -ItemType Directory -Force -Path $outputDir | Out-Null
 
